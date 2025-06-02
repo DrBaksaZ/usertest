@@ -47,5 +47,5 @@ button.addEventListener('click', function() {
   showLoader()
   setTimeout(function() {
     getUsers()
-  }, 0)
+  }, 3000)
 })
