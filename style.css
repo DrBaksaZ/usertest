@@ -51,6 +51,18 @@ ul {
   animation: l16 1s infinite;
   margin: 0 auto;
 }
+
+.user-info {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.user-info p {
+  color: royalblue;
+  font-weight: 400;
+}
+
 @keyframes l16{ 
     50%,100% {background-position: 100% 100%,50% 0,0 100%} 
 }

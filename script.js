@@ -8,9 +8,19 @@ async function getUsers() {
     const respone = await fetch('https://jsonplaceholder.typicode.com/users')
     const data = await respone.json()
     data.forEach(user => {
-      const item = document.createElement('li')
-      item.innerText = user.name
-      userList.appendChild(item)
+      const containerDiv = document.createElement("div")
+      containerDiv.setAttribute('class', 'user-info')
+
+      const name = document.createElement("h4")
+      name.innerText = user.name
+
+      const userName = document.createElement("p")
+      userName.innerText = `@${user.username}`
+
+      containerDiv.appendChild(name)
+      containerDiv.appendChild(userName)
+
+      userList.appendChild(containerDiv)
     })
   } catch (err) {
     console.log(err)
@@ -37,5 +47,5 @@ button.addEventListener('click', function() {
   showLoader()
   setTimeout(function() {
     getUsers()
-  }, 3000)
+  }, 0)
 })
